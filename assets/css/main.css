@@ -19,6 +19,13 @@ Index Of css
 16. Mail Success CSS
 17. Footer CSS
 ========================== */
+@font-face {
+    font-family: 'ChillRoundF';
+    src: url('/ChillRoundF.ttf') format('truetype');
+}
+body {
+    font-family: 'ChillRoundF', sans-serif;
+}
 /*======================================
     Variables
 ========================================*/
