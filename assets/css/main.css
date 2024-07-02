@@ -32,7 +32,15 @@ html {
 
 @font-face {
     font-family: 'ChillRoundF';
-    src: url('/ChillRoundF.ttf') format('truetype');
+    src: url('/ChillRoundFRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChillRoundF';
+    src: url('/ChillRoundFBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 body {
   font-family: 'ChillRoundF', sans-serif;
@@ -4147,7 +4155,7 @@ blockquote span {
 
 /* Contact Form Head */
 .contact-form-head {
-  background-image: url("../images/contact/contact-bg.jpg");
+  background-image: url(/145hub/145hub.github.io/edit/main/assets/css/"../images/contact/contact-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
