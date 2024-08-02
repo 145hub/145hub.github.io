@@ -1,531 +1,64 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>官方网站 - 145Hub</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-
-    <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>145Hub 闲聊社区</title>
+    <style>
+        @font-face {
+            font-family: 'ChillRoundF';
+            src: url('https://gcore.jsdelivr.net/gh/145hub/145hub.github.io@master/ChillRoundFRegular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'ChillRoundF';
+            src: url('https://gcore.jsdelivr.net/gh/145hub/145hub.github.io@master/ChillRoundFBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        * {
+            font-family: ChillRoundF, Verdana, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #0076D4;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-icon">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- /End Preloader -->
-
-    <!-- Start Header Area -->
-    <header class="header navbar-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="nav-inner">
-                        <!-- Start Navbar -->
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo/white-logo.svg" alt="Logo">
-                            </a>
-                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a href="#home" class="page-scroll active"
-                                            aria-label="Toggle navigation">官网主页</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#overview" class="page-scroll" aria-label="Toggle navigation">社区简述</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#team" class="page-scroll" aria-label="Toggle navigation">管理团队</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#faq" class="page-scroll" aria-label="Toggle navigation">疑难解答</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                            <div class="button add-list-button">
-                                <a href="https://145hub.freeflarum.com" class="btn">进入社区</a>
-                            </div>
-                        </nav>
-                        <!-- End Navbar -->
-                    </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </header>
-    <!-- End Header Area -->
-
-    <!-- Start Hero Area -->
-    <section id="home" class="hero-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-12 col-12">
-                    <div class="hero-content">
-                        <h1 class="wow fadeInLeft" data-wow-delay=".4s">145Hub 闲聊社区</h1>
-                        <p class="wow fadeInLeft" data-wow-delay=".6s">热爱闲聊、分享的社区平台。</p>
-                        <div class="button wow fadeInLeft" data-wow-delay=".8s">
-                            <a href="https://145hub.freeflarum.com" class="btn">进入社区</a>
-                            <a href="https://www.bilibili.com/blackboard/webplayer/mbplayer.html?isOutside=true&aid=80433022&bvid=BV1GJ411x7h7&cid=137649199&p=1" target='_blank'
-                                class="glightbox video-button"><span class="video"><i
-                                        class="lni lni-play"></i></span><span class="text">观看视频</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-12 col-12">
-                    <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
-                        <img src="https://img.fastmirror.net/s/2024/06/28/667d8e065dc81.jpeg" alt="#">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Hero Area -->
-    <!-- Start App Info Area -->
-    <section id="overview" class="app-info section">
-        <div class="container">
-            <div class="info-one">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <!-- Start Info Text -->
-                        <div class="info-text wow fadeInLeft" data-wow-delay=".3s">
-                            <h2>简洁的界面</h2>
-                            <p>让人们享受交谈的乐趣，而无繁琐的操作。</p>
-                            <div class="button">
-                                <a href="https://145hub.freeflarum.com/tags" class="btn">随便看看</a>
-                            </div>
-                        </div>
-                        <!-- End Info Text -->
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <div class="info-image wow fadeInRight" data-wow-delay=".5s">
-                            <img class="ss1" src="https://img.fastmirror.net/s/2024/06/28/667d8f1b9cfd0.jpeg" alt="#">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="info-one style2">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <div class="info-image wow fadeInLeft" data-wow-delay=".3s">
-                            <img class="ss1" src="https://img.fastmirror.net/s/2024/06/28/667d923b941ed.jpeg" alt="#">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-12">
-                        <!-- Start Info Text -->
-                        <div class="info-text wow fadeInRight" data-wow-delay=".5s">
-                            <h2>丰富的功能</h2>
-                            <p>回复、点赞、编辑、社区币、排行榜等 20 多个功能等待您发现！</p>
-                            <div class="button">
-                                <a href="https://145hub.freeflarum.com/moneyLeaderboard" class="btn">看看资金排行榜</a>
-                            </div>
-                        </div>
-                        <!-- End Info Text -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End App Info Area -->
-    <!-- Start Achievement Area -->
-    <section class="our-achievement section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
-                    <div class="title">
-                        <h2>145Hub 已经公开使用</h2>
-                        <p>145Hub 诞生于 2024 年 3 月 5 日</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
-                                <h3 class="counter"><span id="secondo1" class="countup" cup-end="100">100</span>+</h3>
-                                <p>讨论</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
-                                <h3 class="counter"><span id="secondo2" class="countup" cup-end="120">300</span>+</h3>
-                                <p>回复</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-                                <h3 class="counter"><span id="secondo3" class="countup" cup-end="125">20</span>k+</h3>
-                                <p>浏览量</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Achievement Area -->
-    <!-- Start Team Area -->
-    <section id="team" class="team section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h3 class="wow zoomIn" data-wow-delay=".2s">Team</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">管理团队</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">这些都是为社区做过贡献的管理员</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".2s">
-                        <div class="image">
-                            <img src="https://img.fastmirror.net/s/2024/04/23/6627ccdc61291.jpeg" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="javascript:void(0)">14569</a></h3>
-                                        <h5>社区创建者</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".4s">
-                        <div class="image">
-                            <img src="https://img.fastmirror.net/s/2024/04/23/6627cd4e081de.jpeg" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="javascript:void(0)">NiceHello</a></h3>
-                                        <h5>Nice 项目创建者</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".6s">
-                        <div class="image">
-                            <img src="https://img.fastmirror.net/s/2024/04/23/6627cd76da49b.png" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="javascript:void(0)">Lruri_awa</a></h3>
-                                        <h5>Block bbs 站长</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Area -->
-    <!-- Start Call To Action Area -->
-    <section class="section call-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                    <div class="cta-content">
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s">您已经阅读了 60% 的内容</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".4s">有没有考虑过进入社区看看？</p>
-                        <div class="button wow fadeInUp" data-wow-delay=".6s">
-                            <a href="https://145hub.freeflarum.com" class="btn">进入社区</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Call To Action Area -->
-
-    <!-- Start Faq Area -->
-    <section id="faq" class="faq section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h3 class="wow zoomIn" data-wow-delay=".2s">Faq</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">解决你的疑惑，使你不再迷茫。</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">这里的问题解答总有你能用的上的！</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    <span class="title"><span class="serial">01</span>社区加载速度为什么这么慢？</span><i class="lni lni-plus"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>基于Freeflarum搭建，使用国外服务器。</p>
-                                    <p>加载速度第一次很慢，以后有缓存时会加快。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                    <span class="title"><span class="serial">02</span>我该如何注册账号？</span><i class="lni lni-plus"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>进入社区主页，点击「注册」按钮，在对话框中输入您的邮箱并设置密码，然后点击对话框中的「注册」按钮。</p>
-                                    <p>注册成功后，我们会向您注册的邮箱发送一封激活邮件，点击邮件中的链接激活账号，如果未找到，请检查垃圾邮箱。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <span class="title"><span class="serial">03</span>社区是靠什么运行的？</span><i class="lni lni-plus"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>社区基于 Freeflarum 搭建。</p>
-                                    <p>功能齐全，无垃圾扩展。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <span class="title"><span class="serial">04</span>我可以在社区里使用什么语法发帖？</span><i class="lni lni-plus"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>我们的社区完全支持 Markdown 语法，也支持少部分的 BBCode 语法。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <span class="title"><span class="serial">05</span>社区有任何交流群吗？</span><i class="lni lni-plus"></i>
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>QQ交流群：669596210</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/ End Faq Area -->
-    <!-- Start Footer Area -->
-    <footer class="footer">
-        <!-- Start Footer Top -->
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <!-- Single Widget -->
-                        <div class="single-footer f-about">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo/white-logo.svg" alt="#">
-                                </a>
-                            </div>
-                            <p>热爱闲聊、分享的社区平台。</p>
-                            <p>Copyright © 2024 145Hub 保留所有权利。</p>
-                        </div>
-                        <!-- End Single Widget -->
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-12">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-12">
-                                <!-- Single Widget -->
-                                <div class="single-footer f-link">
-                                    <h3>官方链接</h3>
-                                    <ul>
-                                        <li><a href="https://145hub.freeflarum.com">社区主页</a></li>
-                                        <li><a href="https://145hub.freeflarum.com/d/4">社区规范</a></li>
-                                        <li><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=CPqGX0VvWuPQJ101zdXEiV8gx_LUjwoM&authKey=LjlxLpPFBbbw9C7ioRqOfZTnccYEX7uha9ahnvGH0lViNbH3buiwSXuTOPGCtDl9&noverify=0&group_code=669596210">加入QQ群</a></li>
-                                        <li><a href="https://stats.uptimerobot.com/bnOCSEE29P">网站状态</a></li>
-                                        <li><a href="https://eu.umami.is/share/jiNq6hCh0qcGkbm6">访问统计</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End Single Widget -->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-12">
-                                <!-- Single Widget -->
-                                <div class="single-footer f-link">
-                                    <h3>敬请期待</h3>
-                                    <ul>
-                                        <li><a href="javascript:void(0)">敬请期待</a></li>
-                                        <li><a href="javascript:void(0)">敬请期待</a></li>
-                                        <li><a href="javascript:void(0)">敬请期待</a></li>
-                                        <li><a href="javascript:void(0)">敬请期待</a></li>
-                                        <li><a href="javascript:void(0)">敬请期待</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End Single Widget -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Footer Top -->
-    </footer>
-    <!--/ End Footer Area -->
-    
-    <!-- ========================= scroll-top ========================= -->
-    <a href="#" class="scroll-top">
-        <i class="lni lni-chevron-up"></i>
-    </a>
-
-    <!-- ========================= JS here ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/count-up.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script type="text/javascript">
-        //======== tiny slider
-        tns({
-            container: '.client-logo-carousel',
-            autoplay: true,
-            autoplayButtonOutput: false,
-            mouseDrag: true,
-            gutter: 15,
-            nav: false,
-            controls: false,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                540: {
-                    items: 2,
-                },
-                768: {
-                    items: 3,
-                },
-                992: {
-                    items: 4,
-                }
-            }
-        });
-
-        //========= testimonial 
-        tns({
-            container: '.testimonial-slider',
-            items: 3,
-            slideBy: 'page',
-            autoplay: false,
-            mouseDrag: true,
-            gutter: 0,
-            nav: true,
-            controls: false,
-            controlsText: ['<i class="lni lni-arrow-left"></i>', '<i class="lni lni-arrow-right"></i>'],
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                540: {
-                    items: 1,
-                },
-                768: {
-                    items: 1,
-                },
-                992: {
-                    items: 1,
-                },
-                1170: {
-                    items: 1,
-                }
-            }
-        });
-
-        //========= glightbox
-        GLightbox({
-            'href': '#',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
-
-        //====== counter up 
-        var cu = new counterUp({
-            start: 0,
-            duration: 2000,
-            intvalues: true,
-            interval: 100,
-            append: " ",
-        });
-        cu.start();
-    </script>
+    <h1>欢迎来到 145Hub 闲聊社区!</h1>
+    <button onclick="location.href='https://145hub.freeflarum.com'">进入社区</button>
 </body>
-
 </html>
