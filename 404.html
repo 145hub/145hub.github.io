@@ -1,78 +1,76 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>404 - 页面未找到</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-
-  <!-- ========================= CSS here ========================= -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-  <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>145Hub</title>
+    <style>
+        @font-face {
+            font-family: 'ChillRoundF';
+            src: url('https://gcore.jsdelivr.net/gh/145hub/145hub.github.io@master/ChillRoundFRegular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'ChillRoundF';
+            src: url('https://gcore.jsdelivr.net/gh/145hub/145hub.github.io@master/ChillRoundFBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        * {
+            font-family: ChillRoundF, Verdana, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #0076D4;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const path = window.location.pathname;
+            const targetUrl = `https://145hub.freeflarum.com${path}`;
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 1000);
+            document.getElementById("redirectButton").onclick = function() {
+                window.location.href = targetUrl;
+            };
+        });
+    </script>
 </head>
-
 <body>
-  <!--[if lte IE 9]>
-      <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-      </p>
-    <![endif]-->
-
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-icon">
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- /End Preloader -->
-
-  <!-- Start Error Area -->
-  <div class="error-area">
-    <div class="d-table">
-      <div class="d-table-cell">
-        <div class="container">
-          <div class="error-content">
-            <h1>404</h1>
-            <h2>哎呀！我们遇到了一些问题！</h2>
-            <p>抱歉，您访问的页面不存在。</p>
-            <div class="button">
-              <a href="/" class="btn">返回主页</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Error Area -->
-
-  <!-- ========================= JS here ========================= -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/tiny-slider.js"></script>
-  <script src="assets/js/glightbox.min.js"></script>
-  <script>
-    window.onload = function () {
-      window.setTimeout(fadeout, 500);
-    }
-
-    function fadeout() {
-      document.querySelector('.preloader').style.opacity = '0';
-      document.querySelector('.preloader').style.display = 'none';
-    }
-  </script>
+    <h1>145Hub</h1>
+    <p>正在重定向，请稍后......</p>
+    <button id="redirectButton">立即跳转</button>
 </body>
-
 </html>
